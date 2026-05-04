@@ -188,13 +188,13 @@ export default function Hero() {
               {[
                 { href: '#contact', icon: <Mail size={16} />, label: 'Get in Touch', primary: true, id: 'hero-contact-btn' },
                 { href: '#projects', icon: <Eye size={16} />, label: 'View Projects', primary: false, id: 'hero-projects-btn' },
-                { href: '/resume.pdf', icon: <Download size={16} />, label: 'Download CV', primary: false, id: 'hero-cv-btn' },
+                { href: '/projects/Oshada_Nethmina_Resume.pdf', icon: <Download size={16} />, label: 'Download CV', primary: false, id: 'hero-cv-btn' },
               ].map((btn, i) => (
                 <motion.a
                   key={btn.id}
                   id={btn.id}
                   href={btn.href}
-                  download={btn.href === '/resume.pdf'}
+                  download={btn.href.endsWith('.pdf')}
                   initial={{ opacity: 0, scale: 0.85 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.3, delay: 0.5 + i * 0.07 }}
@@ -369,7 +369,7 @@ export default function Hero() {
               }}
             >
               <div style={{ fontSize: '0.68rem', color: 'var(--text-muted)', marginBottom: 3, letterSpacing: '0.05em' }}>PROJECTS</div>
-              <div style={{ fontSize: '1.1rem', fontWeight: 800, color: '#22d3ee', fontFamily: 'var(--font-space-grotesk)' }}>20+ Shipped</div>
+              <div style={{ fontSize: '1.1rem', fontWeight: 800, color: '#22d3ee', fontFamily: 'var(--font-space-grotesk)' }}>5+ Academic & Personal Projects</div>
             </motion.div>
           </motion.div>
         </div>

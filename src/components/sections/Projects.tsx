@@ -9,36 +9,36 @@ import { GitHubIcon } from '@/components/icons';
 
 const projects = [
   {
-    id: 'proj-1', title: 'AI Chat Platform', featured: true,
-    description: 'Real-time AI-powered chat with context memory, multi-model support, and team collaboration. Built with streaming SSE and WebSocket.',
-    image: '/projects/ai-chat.jpg',
-    tags: ['Next.js', 'OpenAI', 'WebSockets', 'MongoDB', 'TailwindCSS'],
-    demoUrl: 'https://demo.example.com', codeUrl: 'https://github.com',
-    emoji: '🤖', accentColor: '#6366f1', accentAlpha: 'rgba(99,102,241,',
+    id: 'proj-1', title: 'MyTurn – Smart Fuel Queue Optimization System', featured: true,
+    description: 'AI-powered queue optimization and predictive analytics for fuel stations using reinforcement learning (Q-learning) and real-time data processing with AWS services and Java/Spring Boot.',
+    image: '/projects/myturn.png',
+    tags: ['Java/Spring Boot', 'PostgreSQL', 'Next.js', 'TailwindCSS', 'AI/ML'],
+    demoUrl: 'https://demo.example.com', codeUrl: 'https://github.com/stars/Oshada-Nethmina/lists/myturn',
+    accentColor: '#6366f1', accentAlpha: 'rgba(99,102,241,',
   },
   {
-    id: 'proj-2', title: 'E-Commerce Suite', featured: true,
-    description: 'Full-featured e-commerce platform with Stripe payments, inventory management, analytics dashboard, and AWS S3 media storage.',
-    image: '/projects/ecommerce.jpg',
-    tags: ['React', 'Node.js', 'Stripe', 'AWS', 'PostgreSQL'],
-    demoUrl: 'https://demo.example.com', codeUrl: 'https://github.com',
-    emoji: '🛒', accentColor: '#22d3ee', accentAlpha: 'rgba(34,211,238,',
+    id: 'proj-2', title: 'SmartBiz - AI Powered ERP Software', featured: true,
+    description: 'SmartBiz is a comprehensive ERP (Enterprise Resource Planning) system designed to streamline business operations. It features advanced inventory management, sales and purchase order tracking, client and supplier relationship management, and an AI-powered analytics engine that provides intelligent insights to optimize business performance.',
+    image: '/projects/smartbiz.png',
+    tags: ['React', 'Spring Boot', 'MySQL', 'OpenAI API'],
+    demoUrl: 'https://demo.example.com', codeUrl: 'https://github.com/stars/Oshada-Nethmina/lists/smartbiz',
+    accentColor: '#22d3ee', accentAlpha: 'rgba(34,211,238,',
   },
   {
-    id: 'proj-3', title: 'DevOps Pipeline Tool', featured: false,
-    description: 'CI/CD automation platform with Docker, Kubernetes orchestration, and Slack notifications for deployment events.',
-    image: '/projects/devops.jpg',
-    tags: ['Docker', 'Kubernetes', 'Python', 'Spring Boot', 'Redis'],
-    demoUrl: 'https://demo.example.com', codeUrl: 'https://github.com',
-    emoji: '⚙️', accentColor: '#8b5cf6', accentAlpha: 'rgba(139,92,246,',
+    id: 'proj-3', title: 'EventBuddy – Smart Event Planning & Vendor Marketplace', featured: false,
+    description: 'EventBuddy is an intelligent event planning platform that connects organizers with vendors seamlessly. It simplifies event management through automated planning tools, real-time collaboration, and a curated marketplace of event suppliers.',
+    image: '/projects/eventbuddy.png',
+    tags: ['React', 'Node.js', 'Express.js', 'Stripe / PayPal (planned)', 'MongoDB'],
+    demoUrl: 'https://demo.example.com', codeUrl: 'https://github.com/Hasmoonn/EventBuddy',
+    accentColor: '#8b5cf6', accentAlpha: 'rgba(139,92,246,',
   },
   {
-    id: 'proj-4', title: 'Mobile Fitness App', featured: false,
-    description: 'Cross-platform fitness tracker with workout plans, progress analytics, nutrition logging and social challenges in React Native.',
-    image: '/projects/fitness.jpg',
-    tags: ['React Native', 'TypeScript', 'Node.js', 'MySQL', 'Firebase'],
-    demoUrl: 'https://demo.example.com', codeUrl: 'https://github.com',
-    emoji: '💪', accentColor: '#10b981', accentAlpha: 'rgba(16,185,129,',
+    id: 'proj-4', title: 'ParkSwift - Smart Parking System', featured: false,
+    description: 'ParkSwift is a smart parking management system that helps drivers find parking spots easily and efficiently. It features real-time parking availability, navigation to parking spots, and payment integration.',
+    image: '/projects/parkswift.png',
+    tags: ['React', 'Node.js', 'Express.js', 'MongoDB', 'Tailwind CSS', 'JWT', 'REST API'],
+    demoUrl: 'https://demo.example.com', codeUrl: 'https://github.com/sampathmenuka/ParkSwift',
+    accentColor: '#10b981', accentAlpha: 'rgba(16,185,129,',
   },
   {
     id: 'proj-5', title: 'Real-time Dashboard', featured: false,
@@ -46,7 +46,7 @@ const projects = [
     image: '/projects/dashboard.jpg',
     tags: ['React', 'D3.js', 'WebSockets', 'Express', 'MongoDB'],
     demoUrl: 'https://demo.example.com', codeUrl: 'https://github.com',
-    emoji: '📊', accentColor: '#f59e0b', accentAlpha: 'rgba(245,158,11,',
+    accentColor: '#f59e0b', accentAlpha: 'rgba(245,158,11,',
   },
   {
     id: 'proj-6', title: 'Blockchain Voting', featured: false,
@@ -54,7 +54,7 @@ const projects = [
     image: '/projects/blockchain.jpg',
     tags: ['Solidity', 'Web3.js', 'React', 'Ethers.js', 'IPFS'],
     demoUrl: 'https://demo.example.com', codeUrl: 'https://github.com',
-    emoji: '⛓️', accentColor: '#6366f1', accentAlpha: 'rgba(99,102,241,',
+    accentColor: '#6366f1', accentAlpha: 'rgba(99,102,241,',
   },
 ];
 
@@ -160,16 +160,14 @@ export default function Projects() {
                       style={{ objectFit: 'cover' }}
                       onError={(e) => { (e.target as HTMLImageElement).style.opacity = '0'; }}
                     />
-                    {/* Overlay with emoji */}
+                    {/* Overlay gradient */}
                     <div style={{
                       position: 'absolute', inset: 0,
                       background: `linear-gradient(135deg, ${project.accentAlpha}0.18), rgba(10,10,10,0.4))`,
                       display: 'flex', alignItems: 'center', justifyContent: 'center',
                       fontSize: '3.5rem',
                       transition: 'all 0.3s',
-                    }}>
-                      {project.emoji}
-                    </div>
+                    }} />
                     {/* Top accent line */}
                     <div style={{
                       position: 'absolute', top: 0, left: 0, right: 0, height: '3px',

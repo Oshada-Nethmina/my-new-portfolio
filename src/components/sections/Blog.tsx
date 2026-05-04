@@ -197,7 +197,7 @@ export default function Blog() {
           style={{ textAlign: 'center' }}
         >
           <motion.a
-            href="#"
+            href="https://medium.com/@oshadanethmina665"
             whileHover={{ scale: 1.04 }}
             whileTap={{ scale: 0.96 }}
             className="btn-outline"
