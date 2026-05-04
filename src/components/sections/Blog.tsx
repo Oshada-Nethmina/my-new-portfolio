@@ -7,25 +7,27 @@ import { Clock, ArrowRight, BookOpen, Tag } from 'lucide-react';
 const posts = [
   {
     id: 'blog-1',
-    title: 'Building Scalable Next.js Apps with Server Components',
-    excerpt: 'How to architect large Next.js applications using RSC, streaming, and the app router for production-grade performance.',
+    title: 'Implementing Secure Password Verification Using bcrypt in Python',
+    excerpt: 'A step-by-step guide to integrating bcrypt for secure password hashing, covering installation, hashing, and verification workflows with detailed Python code examples.',
     date: 'Apr 10, 2026',
     readTime: '8 min read',
-    category: 'Next.js',
+    category: 'Python',
     catColor: '#6366f1',
     catBg: 'rgba(99,102,241,0.1)',
-    emoji: '⚛️',
+    emoji: '🔒',
+    link: 'https://medium.com/@oshadanethmina665/implementing-secure-password-verification-using-bcrypt-in-python-4bb6e1069c45',
   },
   {
     id: 'blog-2',
-    title: 'Integrating OpenAI Into Your Node.js Backend',
-    excerpt: 'A practical guide to streaming responses, function calling, and prompt engineering for production AI features.',
+    title: 'Knowledge Representation in the Semantic Web',
+    excerpt: 'Explore how RDF, OWL, and knowledge graphs structure data for machine understanding and intelligent applications.',
     date: 'Mar 28, 2026',
     readTime: '6 min read',
-    category: 'AI/ML',
+    category: 'Semantic Web',
     catColor: '#22d3ee',
     catBg: 'rgba(34,211,238,0.1)',
-    emoji: '🤖',
+    emoji: '🔗',
+    link: 'https://medium.com/@oshadanethmina665/knowledge-representation-in-the-semantic-web-with-real-world-insight-bc0f3a0803d9',
   },
   {
     id: 'blog-3',
@@ -37,6 +39,7 @@ const posts = [
     catColor: '#fbbf24',
     catBg: 'rgba(251,191,36,0.1)',
     emoji: '🐳',
+    link: 'https://medium.com/@oshadanethmina665',
   },
 ];
 
@@ -173,17 +176,21 @@ export default function Blog() {
                     {post.readTime}
                   </span>
                 </div>
-                <motion.button
+                <motion.a
+                  href={post.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   whileHover={{ x: 4 }}
                   style={{
                     display: 'flex', alignItems: 'center', gap: '4px',
                     background: 'none', border: 'none', cursor: 'pointer',
                     color: 'var(--accent-blue)', fontSize: '0.82rem', fontWeight: 600,
                     padding: 0,
+                    textDecoration: 'none',
                   }}
                 >
                   Read <ArrowRight size={14} />
-                </motion.button>
+                </motion.a>
               </div>
             </motion.article>
           ))}
